@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'build comleted succesfully'
+        echo 'build completed succesfully'
         timeout(time: 5, unit: 'NANOSECONDS') {
           sh 'sleep 10'
       }
@@ -12,7 +12,13 @@ pipeline {
 
    stage('Test') {
       steps {
-        echo 'testing comleted succesfully'
+        echo 'testing completed succesfully'
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        echo 'deploy completed succesfully'
       }
     }
 
